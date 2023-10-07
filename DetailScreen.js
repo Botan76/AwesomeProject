@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-const RecipeDetailScreen = ({ route }) => {
+const DetailScreen = ({ route }) => {
   const { title } = route.params;
 
   return (
@@ -24,4 +24,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default RecipeDetailScreen;
+export default DetailScreen;

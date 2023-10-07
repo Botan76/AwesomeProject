@@ -2,16 +2,16 @@ import React from 'react';
 import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
 
 const DATA = [
-  { id: '1', title: 'Apelsinjuice' },
-  { id: '2', title: 'Banansmoothie' },
-  { id: '3', title: 'Cider' },
+  { title: 'Apelsinjuice' },
+  { title: 'Banansmoothie' },
+  { title: 'Cider' },
 ];
 
-const RecipeListScreen = ({ navigation }) => {
+const MenuScreen = ({ navigation }) => {
   const renderItem = ({ item }) => (
     <TouchableOpacity
       style={styles.item}
-      onPress={() => navigation.navigate('RecipeDetail', { title: item.title })}
+      onPress={() => navigation.navigate('Menu Detail', { title: item.title })}
     >
       <Text style={styles.title}>{item.title}</Text>
     </TouchableOpacity>
@@ -22,7 +22,6 @@ const RecipeListScreen = ({ navigation }) => {
       <FlatList
         data={DATA}
         renderItem={renderItem}
-        keyExtractor={item => item.id}
       />
     </View>
   );
@@ -46,4 +45,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default RecipeListScreen;
+export default MenuScreen;
